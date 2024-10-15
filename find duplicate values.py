@@ -15,17 +15,18 @@ Duplicate Values: 3
 # Read the number of values
 n = int(input("Enter the number of values: "))
 
-# Initialize an empty set to store the values
-values_set = set()
+# Read the values in a single line
+values = list(map(int, input().split()))
 
-# Read n values and add them to the set
-for _ in range(n):
-    value = int(input())
-    values_set.add(value)
+# Count duplicates
+duplicates_count = len(values) - len(set(values))
 
-# Convert the set to a sorted list
-sorted_values = sorted(values_set)
+# Create a set to get unique values
+unique_values = set(values)
 
-# Print the values space-separated
-print(" ".join(map(str, sorted_values)))
+# Print the number of duplicate values
+print(f"Duplicate Values: {duplicates_count}")
+
+# Print the unique values space-separated
+print(" ".join(map(str, sorted(unique_values))))
 """
