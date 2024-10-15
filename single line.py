@@ -11,3 +11,12 @@ Sample Output:
 Maximum: 5
 Minimum: 1
 """
+# Read the values in a single line
+values = input("Enter the values separated by space: ").split()
+
+# Create a set from the values to remove duplicates
+unique_values = set(values)
+
+# Print the number of unique elements
+print(len(unique_values))
+"""
